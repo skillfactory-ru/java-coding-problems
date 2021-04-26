@@ -12,7 +12,7 @@ public class FindFirstNonRepeatedCharacterTest {
 
     @Test
     public void testFirstNonRepeatingCharacter() {
-        assertThat(FINDER.firstNonRepeatedCharacter("adaaaaa"), is('d'));
-        assertThat(FINDER.firstNonRepeatedCharacter("dadadayaasdad"), is('y'));
+        assertThat(FINDER.firstNonRepeatedCharacter("adaaaaa"), is("d"));
+        assertThat(FINDER.firstNonRepeatedCharacter("dadadayaasdad"), is("y"));
     }
 }
