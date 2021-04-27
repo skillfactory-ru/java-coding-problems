@@ -63,3 +63,42 @@ public static String firstNonRepeatedCharacter(String str) {
   return String.valueOf(Character.toChars(cp));
 }
 ```
+### Задание 3
+Вам необходимо написть реализацию метода, который будет разворачивать переданную в него строчку
+Пример ввода - ```строка```
+Пример вывода ```акортс```
+#### Решение
+Есть два варианта решения - это идти в обход по строчке задом наперед
+и добавлять в результирующую строку, но есть более быстрый подход - использование класса StringBuilder
+```
+    public String reverse(String reverse) {
+        return new StringBuilder(reverse)
+                .reverse()
+                .toString();
+    }
+```
+### Задание 4
+В данном задании необходимо написать проверку на то, что
+входящая строка содержит только числа
+Данную задачу можно решить двумя способами - через цикл и через Stream API
+#### Решение 1
+```
+    public boolean containsOnlyDigits(String input) {
+        for (int index = 0; index < input.length(); index++) {
+            if (!Character.isDigit(input.charAt(index))) {
+                return false;
+            }
+        }
+        return true;
+    }
+```
+#### Решение 2
+```
+    public boolean containsOnlyDigits(String input) {
+        return !input.chars()
+                .anyMatch(Character::isDigit);
+    }
+```
+Следует отметить, что решение через Stream API обычно медленне.
+Это можно заметить на очень больших объемах данных. Если вам важка скорость,
+то следует использовать решение через цикл

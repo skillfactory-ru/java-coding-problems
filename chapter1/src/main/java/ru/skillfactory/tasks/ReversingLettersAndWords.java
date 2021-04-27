@@ -11,6 +11,8 @@ public class ReversingLettersAndWords {
      * @return - строка перевернутая задом наперед
      */
     public String reverse(String reverse) {
-        return "";
+        return new StringBuilder(reverse)
+                .reverse()
+                .toString();
     }
 }

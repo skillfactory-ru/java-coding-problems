@@ -9,6 +9,11 @@ public class ContainsOnlyDigits {
      * @return - true, если в строчке только цифры, в любом другом случае false
      */
     public boolean containsOnlyDigits(String input) {
+        for (int index = 0; index < input.length(); index++) {
+            if (!Character.isDigit(input.charAt(index))) {
+                return false;
+            }
+        }
         return true;
     }
 }
